@@ -8,6 +8,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:scroll_page_view/pager/page_controller.dart';
 import 'package:scroll_page_view/pager/scroll_page_view.dart';
 import 'package:toplulugum/core/utils/colors.dart';
+import 'package:toplulugum/core/widgets/appbarmodel.dart';
 import 'package:toplulugum/core/widgets/sizedbox.dart';
 import 'package:toplulugum/core/widgets/textmodels.dart';
 import 'package:toplulugum/view/home/viewmodel/shopDiscount.dart';
@@ -61,7 +62,7 @@ class _HomeScreenState extends State<HomeScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: CustomAppBar(
         backgroundColor: AppColors.transparent,
         elevation: 0,
         centerTitle: true,

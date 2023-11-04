@@ -49,6 +49,7 @@ dependencies:
   custom_sliding_segmented_control: ^1.8.1
   scroll_page_view: ^1.0.2
   accordion: ^2.6.0
+  flutter_event_calendar: ^1.0.0
 dev_dependencies:
   flutter_test:
     sdk: flutter

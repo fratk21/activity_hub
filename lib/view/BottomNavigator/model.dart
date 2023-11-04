@@ -9,7 +9,7 @@ List<Map<String, dynamic>> data = [
     "label": "Page 1",
   },
   {
-    "icon": Icons.person,
+    "icon": Icons.event_note_outlined,
     "activeColor": Colors.black,
     "inActiveColor": Colors.blueGrey,
     "label": "Page 2",

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../utils/colors.dart';
 
 Widget customButton({
@@ -39,11 +40,13 @@ Widget customButton({
           ),
           Text(
             text,
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 15,
-              fontFamily: 'Poppins',
-              fontWeight: FontWeight.w500,
+            style: GoogleFonts.orbitron(
+              textStyle: const TextStyle(
+                fontSize: 15,
+                color: AppColors.white,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 8,
+              ),
             ),
           ),
         ],

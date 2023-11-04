@@ -1,6 +1,7 @@
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:toplulugum/view/BottomNavigator/model.dart';
+import 'package:toplulugum/view/activity/activity.dart';
 
 import 'package:toplulugum/view/home/home.dart';
 import 'package:toplulugum/view/login/login.dart';
@@ -30,7 +31,7 @@ class _BottomNavigatorState extends State<BottomNavigator> {
 
   final List<Widget> bottomBarPages = [
     const HomeScreen(),
-    const MyRegister(),
+    const activityScreen(),
     const SettingScreen(),
   ];
 

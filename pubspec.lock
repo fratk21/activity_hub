@@ -254,6 +254,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_event_calendar:
+    dependency: "direct main"
+    description:
+      name: flutter_event_calendar
+      sha256: f5b6f22ae01c24a1fc3f6432d3080130bb40efc976e53941b5f6422b6a4f9d64
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -472,6 +480,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.0.6"
+  scoped_model:
+    dependency: transitive
+    description:
+      name: scoped_model
+      sha256: "8dacc77cb5de78d5e159d54cab883847491a73dfaa3d28c52f4ec8b0be32645b"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.0"
   scroll_page_view:
     dependency: "direct main"
     description:
@@ -488,6 +504,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.1"
+  shamsi_date:
+    dependency: transitive
+    description:
+      name: shamsi_date
+      sha256: "5df195a0b7794b7d4a8dc9321244400147896def157b7530c5b8a2f9cfc6a7a4"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.15.0"
   sky_engine:
     dependency: transitive
     description: flutter
