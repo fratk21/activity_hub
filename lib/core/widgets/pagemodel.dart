@@ -26,7 +26,7 @@ class _PageModelState extends State<PageModel> {
       child: Scaffold(
         backgroundColor: widget.backgroundcolor ?? AppColors.white,
         appBar: widget.appBar,
-        body: SingleChildScrollView(child: CustomPadding(child: widget.body)),
+        body: CustomPadding(child: widget.body),
         floatingActionButton: widget.floatingActionButton,
       ),
     );

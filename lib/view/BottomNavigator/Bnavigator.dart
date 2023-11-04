@@ -1,6 +1,8 @@
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:toplulugum/view/home.dart';
+import 'package:toplulugum/view/BottomNavigator/model.dart';
+
+import 'package:toplulugum/view/home/home.dart';
 import 'package:toplulugum/view/login/login.dart';
 import 'package:toplulugum/view/settings/settings.dart';
 import 'package:toplulugum/view/signup/register.dart';
@@ -26,9 +28,8 @@ class _BottomNavigatorState extends State<BottomNavigator> {
     super.dispose();
   }
 
-  /// widget list
   final List<Widget> bottomBarPages = [
-    const MyLogin(),
+    const HomeScreen(),
     const MyRegister(),
     const SettingScreen(),
   ];
@@ -52,44 +53,8 @@ class _BottomNavigatorState extends State<BottomNavigator> {
               removeMargins: false,
               bottomBarWidth: 500,
               durationInMilliSeconds: 300,
-              bottomBarItems: [
-                const BottomBarItem(
-                  inActiveItem: Icon(
-                    Icons.home_filled,
-                    color: Colors.blueGrey,
-                  ),
-                  activeItem: Icon(
-                    Icons.home_filled,
-                    color: Colors.black,
-                  ),
-                  itemLabel: 'Page 1',
-                ),
-                const BottomBarItem(
-                  inActiveItem: Icon(
-                    Icons.person,
-                    color: Colors.blueGrey,
-                  ),
-                  activeItem: Icon(
-                    Icons.person,
-                    color: Colors.black,
-                  ),
-                  itemLabel: 'Page 2',
-                ),
-                const BottomBarItem(
-                  inActiveItem: Icon(
-                    Icons.settings,
-                    color: Colors.blueGrey,
-                  ),
-                  activeItem: Icon(
-                    Icons.settings,
-                    color: Colors.black,
-                  ),
-                  itemLabel: 'Settings',
-                ),
-              ],
+              bottomBarItems: bottomBarItems,
               onTap: (index) {
-                /// perform action on tab change and to update pages you can update pages without pages
-
                 _pageController.jumpToPage(index);
               },
             )

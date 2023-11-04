@@ -46,7 +46,9 @@ dependencies:
   animated_notch_bottom_bar: ^1.0.0
   babstrap_settings_screen: ^0.1.6
   random_avatar: ^0.0.8
-
+  custom_sliding_segmented_control: ^1.8.1
+  scroll_page_view: ^1.0.2
+  accordion: ^2.6.0
 dev_dependencies:
   flutter_test:
     sdk: flutter

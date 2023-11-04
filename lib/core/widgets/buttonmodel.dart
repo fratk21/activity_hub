@@ -4,7 +4,7 @@ import '../utils/colors.dart';
 Widget customButton({
   double width = 0.8,
   double height = 0.08,
-  Color backgroundColor = AppColors.orange,
+  Color backgroundColor = AppColors.dpurple,
   String text = 'Go Go',
   VoidCallback? onPressed,
   IconData? iconData,

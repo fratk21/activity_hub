@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AppColors {
@@ -18,6 +19,8 @@ class AppColors {
   static const Color green = Colors.green;
   static const Color yellow = Colors.yellow;
   static const Color crema = Color.fromARGB(255, 255, 230, 189);
-
+  static const Color lightwhite = CupertinoColors.lightBackgroundGray;
   static const Color transparent = Colors.transparent;
+  static const Color blue = Color(0xFF007BFF);
+  static const Color dpurple = Colors.deepPurple;
 }
