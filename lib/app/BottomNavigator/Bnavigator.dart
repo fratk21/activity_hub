@@ -1,12 +1,9 @@
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:toplulugum/view/BottomNavigator/model.dart';
-import 'package:toplulugum/view/activity/activity.dart';
-
-import 'package:toplulugum/view/home/home.dart';
-import 'package:toplulugum/view/login/login.dart';
-import 'package:toplulugum/view/settings/settings.dart';
-import 'package:toplulugum/view/signup/register.dart';
+import 'package:toplulugum/app/BottomNavigator/viewModel/model.dart';
+import 'package:toplulugum/app/userModule/view/activity/activity.dart';
+import 'package:toplulugum/app/userModule/view/home/home.dart';
+import 'package:toplulugum/app/userModule/view/profile/profile.dart';
 
 class BottomNavigator extends StatefulWidget {
   const BottomNavigator({super.key});
@@ -18,7 +15,6 @@ class BottomNavigator extends StatefulWidget {
 class _BottomNavigatorState extends State<BottomNavigator> {
   final _pageController = PageController(initialPage: 0);
 
-  /// Controller to handle bottom nav bar and also handles initial page
   final _controller = NotchBottomBarController(index: 0);
 
   int maxCount = 5;
@@ -29,12 +25,6 @@ class _BottomNavigatorState extends State<BottomNavigator> {
     super.dispose();
   }
 
-  final List<Widget> bottomBarPages = [
-    const HomeScreen(),
-    const activityScreen(),
-    const SettingScreen(),
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,10 +32,10 @@ class _BottomNavigatorState extends State<BottomNavigator> {
         controller: _pageController,
         physics: const NeverScrollableScrollPhysics(),
         children: List.generate(
-            bottomBarPages.length, (index) => bottomBarPages[index]),
+            bottomUserBarPages.length, (index) => bottomUserBarPages[index]),
       ),
       extendBody: true,
-      bottomNavigationBar: (bottomBarPages.length <= maxCount)
+      bottomNavigationBar: (bottomUserBarPages.length <= maxCount)
           ? AnimatedNotchBottomBar(
               notchBottomBarController: _controller,
               color: Colors.white,
@@ -54,7 +44,7 @@ class _BottomNavigatorState extends State<BottomNavigator> {
               removeMargins: false,
               bottomBarWidth: 500,
               durationInMilliSeconds: 300,
-              bottomBarItems: bottomBarItems,
+              bottomBarItems: BottomBarItems(usermodel),
               onTap: (index) {
                 _pageController.jumpToPage(index);
               },

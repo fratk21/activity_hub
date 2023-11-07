@@ -6,10 +6,10 @@ import 'package:toplulugum/core/widgets/buttonmodel.dart';
 import 'package:toplulugum/core/widgets/showsnackbar.dart';
 import 'package:toplulugum/core/widgets/sizedbox.dart';
 import 'package:toplulugum/core/widgets/textfieldmodel.dart';
-import 'package:toplulugum/view/BottomNavigator/Bnavigator.dart';
+import 'package:toplulugum/app/BottomNavigator/Bnavigator.dart';
 
-import 'package:toplulugum/view/home/home.dart';
-import 'package:toplulugum/view/signup/services/function.dart';
+import 'package:toplulugum/app/userModule/view/home/home.dart';
+import 'package:toplulugum/app/userModule/view/signup/services/function.dart';
 
 class MyRegister extends StatefulWidget {
   const MyRegister({Key? key}) : super(key: key);

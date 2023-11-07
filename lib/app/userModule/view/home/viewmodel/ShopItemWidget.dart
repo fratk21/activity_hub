@@ -78,32 +78,3 @@ class ShopItemWidget extends StatelessWidget {
         ));
   }
 }
-
-Widget imageView(String image) {
-  return Padding(
-    padding: const EdgeInsets.symmetric(horizontal: 8),
-    child: Card(
-      child: ClipRRect(
-        clipBehavior: Clip.antiAlias,
-        borderRadius: BorderRadius.circular(8),
-        child: Image.network(image, fit: BoxFit.cover),
-      ),
-    ),
-  );
-}
-
-Widget communityView(String image) {
-  return Padding(
-    padding: const EdgeInsets.symmetric(horizontal: 8),
-    child: Card(
-      child: ClipRRect(
-        clipBehavior: Clip.antiAlias,
-        borderRadius: BorderRadius.circular(8),
-        child: CircleAvatar(
-          radius: 30.0,
-          backgroundImage: NetworkImage(image),
-        ),
-      ),
-    ),
-  );
-}

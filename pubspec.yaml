@@ -50,6 +50,8 @@ dependencies:
   scroll_page_view: ^1.0.2
   accordion: ^2.6.0
   flutter_event_calendar: ^1.0.0
+  coupon_uikit: ^0.2.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

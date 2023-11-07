@@ -6,8 +6,8 @@ import 'package:toplulugum/core/widgets/pagemodel.dart';
 import 'package:toplulugum/core/widgets/sizedbox.dart';
 import 'package:toplulugum/core/widgets/textmodels.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:toplulugum/view/BottomNavigator/Bnavigator.dart';
-import 'package:toplulugum/view/login/login.dart';
+import 'package:toplulugum/app/BottomNavigator/Bnavigator.dart';
+import 'package:toplulugum/app/userModule/view/login/login.dart';
 
 class splashscreen extends StatefulWidget {
   const splashscreen({super.key});

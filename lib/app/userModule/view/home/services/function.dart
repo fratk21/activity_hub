@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:toplulugum/view/home/model.dart/comunityNoticeModel.dart';
-import 'package:toplulugum/view/home/model.dart/shopDiscountModel.dart';
+import 'package:toplulugum/app/userModule/view/home/model.dart/comunityNoticeModel.dart';
+import 'package:toplulugum/app/userModule/view/home/model.dart/shopDiscountModel.dart';
 
 final List<CommunityModel> communityData = [
   CommunityModel(

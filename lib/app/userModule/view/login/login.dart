@@ -4,10 +4,10 @@ import 'package:toplulugum/core/utils/pageroutes.dart';
 import 'package:toplulugum/core/widgets/sizedbox.dart';
 import 'package:toplulugum/core/widgets/textbuttonmodel.dart';
 import 'package:toplulugum/core/widgets/textfieldmodel.dart';
-import 'package:toplulugum/view/signup/register.dart';
+import 'package:toplulugum/app/userModule/view/signup/register.dart';
 
-import '../../core/utils/colors.dart';
-import '../../core/widgets/buttonmodel.dart';
+import '../../../../core/utils/colors.dart';
+import '../../../../core/widgets/buttonmodel.dart';
 
 class MyLogin extends StatefulWidget {
   const MyLogin({Key? key}) : super(key: key);
