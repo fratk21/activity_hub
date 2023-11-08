@@ -20,7 +20,7 @@ class _profileScreenState extends State<profileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBarview(),
+      appBar: appBarview(false, context),
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(8),

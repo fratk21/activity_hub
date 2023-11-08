@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_event_calendar/flutter_event_calendar.dart';
 import 'package:toplulugum/core/utils/colors.dart';
-import 'package:toplulugum/app/userModule/view/activity/viewmodel/eventViewModels.dart';
+import 'package:toplulugum/app/global/activity/viewmodel/eventViewModels.dart';
 
-Widget activitybody() {
+Widget activitybody(ViewType viewType) {
   return EventCalendar(
     dayOptions: DayOptions(
         selectedTextColor: AppColors.white,
@@ -13,7 +13,7 @@ Widget activitybody() {
     calendarType: CalendarType.GREGORIAN,
     calendarLanguage: 'tr',
     calendarOptions: CalendarOptions(
-      viewType: ViewType.DAILY,
+      viewType: viewType,
     ),
     eventOptions: EventOptions(
       emptyText: "Etkinlik Yok",

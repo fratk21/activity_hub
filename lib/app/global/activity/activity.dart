@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_event_calendar/flutter_event_calendar.dart';
 
-import 'package:toplulugum/app/userModule/view/activity/viewmodel/activityModelview.dart';
+import 'package:toplulugum/app/global/activity/viewmodel/activityModelview.dart';
 
 import 'package:toplulugum/app/userModule/view/widgets/appbar.dart';
 
@@ -15,8 +16,8 @@ class _activityScreenState extends State<activityScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBarview(),
-      body: activitybody(),
+      appBar: appBarview(false, context),
+      body: activitybody(ViewType.DAILY),
     );
   }
 }

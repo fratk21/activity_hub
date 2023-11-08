@@ -1,12 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:toplulugum/app/global/BottomNavigator/viewModel/model.dart';
 import 'package:toplulugum/core/utils/colors.dart';
 import 'package:toplulugum/core/utils/pageroutes.dart';
 import 'package:toplulugum/core/widgets/buttonmodel.dart';
 import 'package:toplulugum/core/widgets/showsnackbar.dart';
 import 'package:toplulugum/core/widgets/sizedbox.dart';
 import 'package:toplulugum/core/widgets/textfieldmodel.dart';
-import 'package:toplulugum/app/BottomNavigator/Bnavigator.dart';
+import 'package:toplulugum/app/global/BottomNavigator/Bnavigator.dart';
 
 import 'package:toplulugum/app/userModule/view/home/home.dart';
 import 'package:toplulugum/app/userModule/view/signup/services/function.dart';
@@ -117,7 +118,10 @@ class _MyRegisterState extends State<MyRegister> {
                                 showSnackBar(context, AppColors.shadowColorDark,
                                     "Hoş geldin seni aramızda gördüğümüze çok sevindim , anasayfaya yönlendiriliyorsun ");
                                 Duration(milliseconds: 750);
-                                PageNavigator.push(context, BottomNavigator());
+                                PageNavigator.push(
+                                    context,
+                                    BottomNavigator(
+                                        widgetList: bottomUserBarPages));
                               }
                             },
                           ),

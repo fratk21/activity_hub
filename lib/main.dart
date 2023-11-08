@@ -1,9 +1,10 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:toplulugum/app/global/BottomNavigator/viewModel/model.dart';
 import 'package:toplulugum/firebase_options.dart';
-import 'package:toplulugum/app/BottomNavigator/Bnavigator.dart';
+import 'package:toplulugum/app/global/BottomNavigator/Bnavigator.dart';
 import 'package:toplulugum/app/userModule/view/login/login.dart';
-import 'package:toplulugum/app/userModule/view/splash/splash.dart';
+import 'package:toplulugum/app/global/splash/splash.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -41,7 +42,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const splashscreen(),
+      home: splashscreen(),
     );
   }
 }

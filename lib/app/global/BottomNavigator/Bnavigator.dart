@@ -1,12 +1,13 @@
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:toplulugum/app/BottomNavigator/viewModel/model.dart';
-import 'package:toplulugum/app/userModule/view/activity/activity.dart';
+import 'package:toplulugum/app/global/BottomNavigator/viewModel/model.dart';
+import 'package:toplulugum/app/global/activity/activity.dart';
 import 'package:toplulugum/app/userModule/view/home/home.dart';
 import 'package:toplulugum/app/userModule/view/profile/profile.dart';
 
 class BottomNavigator extends StatefulWidget {
-  const BottomNavigator({super.key});
+  final List<Widget> widgetList;
+  BottomNavigator({super.key, required this.widgetList});
 
   @override
   State<BottomNavigator> createState() => _BottomNavigatorState();
@@ -32,10 +33,10 @@ class _BottomNavigatorState extends State<BottomNavigator> {
         controller: _pageController,
         physics: const NeverScrollableScrollPhysics(),
         children: List.generate(
-            bottomUserBarPages.length, (index) => bottomUserBarPages[index]),
+            widget.widgetList.length, (index) => widget.widgetList[index]),
       ),
       extendBody: true,
-      bottomNavigationBar: (bottomUserBarPages.length <= maxCount)
+      bottomNavigationBar: (widget.widgetList.length <= maxCount)
           ? AnimatedNotchBottomBar(
               notchBottomBarController: _controller,
               color: Colors.white,

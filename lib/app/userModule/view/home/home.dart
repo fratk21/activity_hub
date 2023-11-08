@@ -16,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBarview(),
+      appBar: appBarview(false, context),
       body: homebody(),
     );
   }

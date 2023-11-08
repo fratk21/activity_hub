@@ -8,6 +8,8 @@ class MyTextField extends StatefulWidget {
   final bool obscureText;
   final Icon prefixIcon;
   final Function()? onChanged;
+  final double? height;
+  final int? line;
 
   const MyTextField({
     super.key,
@@ -15,6 +17,8 @@ class MyTextField extends StatefulWidget {
     required this.hintText,
     required this.obscureText,
     required this.prefixIcon,
+    this.line,
+    this.height,
     this.onChanged,
   });
 
@@ -33,38 +37,41 @@ class _MyTextFieldState extends State<MyTextField> {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      controller: widget.controller,
-      obscureText: isObscure,
-      cursorColor: HexColor("#4f4f4f"),
-      decoration: InputDecoration(
-        hintText: widget.hintText,
-        fillColor: HexColor("#f0f3f1").withOpacity(0.8),
-        contentPadding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
-        hintStyle: GoogleFonts.poppins(
-          fontSize: 15,
-          color: HexColor("#8d8d8d"),
+    return Container(
+      height: widget.height,
+      decoration: BoxDecoration(
+        color: HexColor("#f0f3f1").withOpacity(0.8),
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: TextField(
+        maxLines: widget.line,
+        controller: widget.controller,
+        obscureText: isObscure,
+        cursorColor: HexColor("#4f4f4f"),
+        decoration: InputDecoration(
+          hintText: widget.hintText,
+          contentPadding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
+          hintStyle: GoogleFonts.poppins(
+            fontSize: 15,
+            color: HexColor("#8d8d8d"),
+          ),
+          border: InputBorder.none,
+          prefixIcon: widget.prefixIcon,
+          prefixIconColor: HexColor("#4f4f4f"),
+          suffixIcon: widget.obscureText
+              ? GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      isObscure = !isObscure;
+                    });
+                  },
+                  child: Icon(
+                    isObscure ? Icons.visibility_off : Icons.visibility,
+                    color: HexColor("#4f4f4f"),
+                  ),
+                )
+              : null,
         ),
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
-          borderSide: BorderSide.none,
-        ),
-        prefixIcon: widget.prefixIcon,
-        prefixIconColor: HexColor("#4f4f4f"),
-        filled: true,
-        suffixIcon: widget.obscureText
-            ? GestureDetector(
-                onTap: () {
-                  setState(() {
-                    isObscure = !isObscure;
-                  });
-                },
-                child: Icon(
-                  isObscure ? Icons.visibility_off : Icons.visibility,
-                  color: HexColor("#4f4f4f"),
-                ),
-              )
-            : null,
       ),
     );
   }
