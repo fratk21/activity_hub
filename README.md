@@ -1,27 +1,16 @@
-# Değişkenler ve Özellikleri
+# toplulugum
 
-Bir programlama dilinde, değişkenler verileri saklayan ve işleyen özel isimlerdir. İşte JavaScript'te değişkenlerin tanımlanması ve özellikleri:
+A new Flutter project.
 
-```javascript
-// Değişken tanımlama
-var sayi = 42; // 'sayi' isimli bir değişken tanımladık ve 42 değerini atadık
-var metin = "Merhaba, dünya!"; // 'metin' isimli bir değişken tanımladık ve bir metin atadık
+## Getting Started
 
-// Değişkenlerin özellikleri
-document.write("sayi değişkeninin değeri: " + sayi + "<br>"); // Değişkenin değerini yazdırdık
-document.write("metin değişkeninin değeri: " + metin + "<br>");
+This project is a starting point for a Flutter application.
 
-sayi = 100; // Değişkenin değerini güncelledik
-metin = "Merhaba, JavaScript!"; // Değişkenin değerini güncelledik
+A few resources to get you started if this is your first Flutter project:
 
-document.write("sayi değişkeninin güncellenmiş değeri: " + sayi + "<br>");
-document.write("metin değişkeninin güncellenmiş değeri: " + metin + "<br>");
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-// Değişken türleri
-var booleanDegisken = true; // Boolean türünde bir değişken
-var sayiDegisken = 42; // Sayı türünde bir değişken
-var metinDegisken = "Bu bir metin"; // Metin türünde bir değişken
-
-document.write("booleanDegisken türü: " + typeof booleanDegisken + "<br>");
-document.write("sayiDegisken türü: " + typeof sayiDegisken + "<br>");
-document.write("metinDegisken türü: " + typeof metinDegisken + "<br>");
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
