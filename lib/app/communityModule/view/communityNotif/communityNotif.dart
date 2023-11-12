@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:toplulugum/app/communityModule/view/communityNotif/viewModel/notifcard.dart';
 import 'package:toplulugum/app/userModule/view/widgets/appbar.dart';
 import 'package:toplulugum/core/widgets/buttonmodel.dart';
+import 'package:toplulugum/core/widgets/dividerText.dart';
 import 'package:toplulugum/core/widgets/sizedbox.dart';
 import 'package:toplulugum/core/widgets/textfieldmodel.dart';
 import 'package:toplulugum/core/widgets/textmodels.dart';
@@ -45,25 +47,15 @@ class _CommNotifScreenState extends State<CommNotifScreen> {
                 onPressed: () {},
               ),
               sizedBoxH(10),
-              Row(children: <Widget>[
-                Expanded(
-                  child: new Container(
-                      margin: const EdgeInsets.only(left: 10.0, right: 20.0),
-                      child: Divider(
-                        color: Colors.black,
-                        height: 36,
-                      )),
+              dividerText(labelText: "Duyurular"),
+              Expanded(
+                child: ListView.builder(
+                  itemCount: 4,
+                  itemBuilder: (context, index) {
+                    return Expanded(child: infocard());
+                  },
                 ),
-                CustomText(text: "Duyurular"),
-                Expanded(
-                  child: new Container(
-                      margin: const EdgeInsets.only(left: 20.0, right: 10.0),
-                      child: Divider(
-                        color: Colors.black,
-                        height: 36,
-                      )),
-                ),
-              ]),
+              )
             ],
           ),
         ),
