@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:toplulugum/app/communityModule/view/communityNotif/viewModel/notifcard.dart';
-import 'package:toplulugum/app/userModule/view/widgets/appbar.dart';
+import 'package:toplulugum/app/global/widgets/appbar.dart';
 import 'package:toplulugum/core/widgets/buttonmodel.dart';
 import 'package:toplulugum/core/widgets/dividerText.dart';
 import 'package:toplulugum/core/widgets/sizedbox.dart';

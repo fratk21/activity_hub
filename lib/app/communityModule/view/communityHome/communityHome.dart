@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:toplulugum/app/communityModule/view/communityHome/model/choiceList.dart';
 import 'package:toplulugum/app/communityModule/view/communityHome/viewModel/comminityHomeViewmodel.dart';
 import 'package:toplulugum/app/communityModule/view/communityNotif/communityNotif.dart';
-import 'package:toplulugum/app/userModule/view/widgets/appbar.dart';
+import 'package:toplulugum/app/global/widgets/appbar.dart';
 import 'package:toplulugum/core/utils/pageroutes.dart';
 
 class ComumminityHome extends StatefulWidget {
@@ -15,42 +15,9 @@ class ComumminityHome extends StatefulWidget {
 class _ComumminityHomeState extends State<ComumminityHome> {
   @override
   Widget build(BuildContext context) {
-    final List<Choice> items = [
-      Choice(
-        title: 'Duyuru',
-        description: 'Ayarları',
-        onPressed: () {
-          PageNavigator.push(context, CommNotifScreen());
-        },
-      ),
-      Choice(
-        title: 'Etkinlik',
-        description: 'Ayarları',
-        onPressed: () {
-          print('Öğe 2 tıklandı');
-        },
-      ),
-      Choice(
-        title: 'Avantaj',
-        description: 'Ayarları',
-        onPressed: () {
-          print('Öğe 2 tıklandı');
-        },
-      ),
-      Choice(
-        title: 'Haber',
-        description: 'Ayarları',
-        onPressed: () {
-          print('Öğe 2 tıklandı');
-        },
-      ),
-    ];
     return Scaffold(
       appBar: appBarview(false, context),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: choiceView(items),
-      ),
+      body: homebody(),
     );
   }
 }

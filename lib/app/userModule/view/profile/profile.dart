@@ -7,7 +7,7 @@ import 'package:toplulugum/core/widgets/sizedbox.dart';
 import 'package:toplulugum/core/widgets/textmodels.dart';
 import 'package:toplulugum/app/userModule/view/profile/modelview/comminityCard.dart';
 import 'package:toplulugum/app/userModule/view/settings/settings.dart';
-import 'package:toplulugum/app/userModule/view/widgets/appbar.dart';
+import 'package:toplulugum/app/global/widgets/appbar.dart';
 
 class profileScreen extends StatefulWidget {
   const profileScreen({super.key});

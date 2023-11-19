@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:random_text_reveal/random_text_reveal.dart';
-import 'package:toplulugum/app/global/BottomNavigator/viewModel/model.dart';
+import 'package:toplulugum/app/global/pages/BottomNavigator/viewModel/model.dart';
 import 'package:toplulugum/core/utils/colors.dart';
 import 'package:toplulugum/core/utils/pageroutes.dart';
 import 'package:toplulugum/core/widgets/pagemodel.dart';
 import 'package:toplulugum/core/widgets/sizedbox.dart';
 import 'package:toplulugum/core/widgets/textmodels.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:toplulugum/app/global/BottomNavigator/Bnavigator.dart';
+import 'package:toplulugum/app/global/pages/BottomNavigator/Bnavigator.dart';
 import 'package:toplulugum/app/userModule/view/login/login.dart';
 
 class splashscreen extends StatefulWidget {

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:toplulugum/app/userModule/view/home/viewmodel/shopDiscount.dart';
 
-import 'package:toplulugum/app/userModule/view/widgets/appbar.dart';
+import 'package:toplulugum/app/global/widgets/appbar.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key});

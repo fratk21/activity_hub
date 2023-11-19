@@ -1,7 +1,7 @@
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:toplulugum/app/communityModule/view/communityHome/communityHome.dart';
-import 'package:toplulugum/app/global/activity/activity.dart';
+import 'package:toplulugum/app/global/pages/activity/activity.dart';
 import 'package:toplulugum/app/userModule/view/home/home.dart';
 import 'package:toplulugum/app/userModule/view/profile/profile.dart';
 

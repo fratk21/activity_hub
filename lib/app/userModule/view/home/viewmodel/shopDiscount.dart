@@ -5,34 +5,13 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:scroll_page_view/pager/page_controller.dart';
 import 'package:scroll_page_view/pager/scroll_page_view.dart';
+import 'package:toplulugum/app/global/utils/imageSlider.dart';
+import 'package:toplulugum/app/global/utils/style.dart';
 import 'package:toplulugum/core/utils/colors.dart';
 import 'package:toplulugum/core/widgets/sizedbox.dart';
 import 'package:toplulugum/core/widgets/textmodels.dart';
 import 'package:toplulugum/app/userModule/view/home/services/function.dart';
 import 'package:toplulugum/app/userModule/view/home/viewmodel/ShopItemWidget.dart';
-
-Widget imageView(String image) {
-  return Padding(
-    padding: const EdgeInsets.symmetric(horizontal: 8),
-    child: Card(
-      child: ClipRRect(
-        clipBehavior: Clip.antiAlias,
-        borderRadius: BorderRadius.circular(8),
-        child: Image.network(image, fit: BoxFit.cover),
-      ),
-    ),
-  );
-}
-
-Widget imageSlider() {
-  return SizedBox(
-    height: 164,
-    child: ScrollPageView(
-      controller: ScrollPageController(),
-      children: images.map((image) => imageView(image)).toList(),
-    ),
-  );
-}
 
 Widget communityView(String image) {
   return Padding(
@@ -127,24 +106,6 @@ Widget Noticesview() {
   );
 }
 
-const headerStyle = TextStyle(
-  color: Colors.white,
-  fontSize: 18,
-  fontWeight: FontWeight.bold,
-);
-
-const contentStyleHeader = TextStyle(
-  color: Color(0xff999999),
-  fontSize: 14,
-  fontWeight: FontWeight.w700,
-);
-
-const contentStyle = TextStyle(
-  color: Color(0xff999999),
-  fontSize: 14,
-  fontWeight: FontWeight.normal,
-);
-
 Widget homebody() {
   return SingleChildScrollView(
     physics: ClampingScrollPhysics(),
@@ -154,7 +115,7 @@ Widget homebody() {
         children: [
           homeCategoryText("Haberler"),
           sizedBoxH(5),
-          imageSlider(),
+          imageSlider(images),
           sizedBoxH(10),
           homeCategoryText("Duyurular"),
           sizedBoxH(5),

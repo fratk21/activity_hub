@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_event_calendar/flutter_event_calendar.dart';
 import 'package:toplulugum/core/utils/colors.dart';
-import 'package:toplulugum/app/global/activity/viewmodel/eventViewModels.dart';
+import 'package:toplulugum/app/global/pages/activity/viewmodel/eventViewModels.dart';
 
 Widget activitybody(ViewType viewType) {
   return EventCalendar(

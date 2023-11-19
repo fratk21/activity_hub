@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_event_calendar/flutter_event_calendar.dart';
 
-import 'package:toplulugum/app/global/activity/viewmodel/activityModelview.dart';
+import 'package:toplulugum/app/global/pages/activity/viewmodel/activityModelview.dart';
 
-import 'package:toplulugum/app/userModule/view/widgets/appbar.dart';
+import 'package:toplulugum/app/global/widgets/appbar.dart';
 
 class activityScreen extends StatefulWidget {
   const activityScreen({super.key});
