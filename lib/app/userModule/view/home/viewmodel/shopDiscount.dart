@@ -7,6 +7,7 @@ import 'package:scroll_page_view/pager/page_controller.dart';
 import 'package:scroll_page_view/pager/scroll_page_view.dart';
 import 'package:toplulugum/app/global/utils/imageSlider.dart';
 import 'package:toplulugum/app/global/utils/style.dart';
+import 'package:toplulugum/app/global/widgets/Headertext.dart';
 import 'package:toplulugum/core/utils/colors.dart';
 import 'package:toplulugum/core/widgets/sizedbox.dart';
 import 'package:toplulugum/core/widgets/textmodels.dart';
@@ -24,20 +25,6 @@ Widget communityView(String image) {
           radius: 30.0,
           backgroundImage: NetworkImage(image),
         ),
-      ),
-    ),
-  );
-}
-
-Widget homeCategoryText(String text) {
-  return CustomText(
-    alignment: MainAxisAlignment.start,
-    text: text,
-    style: GoogleFonts.orbitron(
-      textStyle: TextStyle(
-        fontSize: 18,
-        color: AppColors.gblue,
-        letterSpacing: 8,
       ),
     ),
   );
@@ -113,15 +100,15 @@ Widget homebody() {
       padding: const EdgeInsets.only(right: 8, left: 8, top: 8, bottom: 8),
       child: Column(
         children: [
-          homeCategoryText("Haberler"),
+          headertext("Haberler"),
           sizedBoxH(5),
           imageSlider(images),
           sizedBoxH(10),
-          homeCategoryText("Duyurular"),
+          headertext("Duyurular"),
           sizedBoxH(5),
           Noticesview(),
           sizedBoxH(5),
-          homeCategoryText("Avantajlarım"),
+          headertext("Avantajlarım"),
           sizedBoxH(5),
           ShopItemview()
         ],

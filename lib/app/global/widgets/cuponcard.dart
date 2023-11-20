@@ -2,8 +2,22 @@ import 'package:coupon_uikit/coupon_uikit.dart';
 import 'package:flutter/material.dart';
 import 'package:toplulugum/core/utils/colors.dart';
 
-class eventViewmodels extends StatelessWidget {
-  const eventViewmodels({Key? key}) : super(key: key);
+class cuponcardModel extends StatelessWidget {
+  final String money,
+      location,
+      commintiyname,
+      eventheader,
+      eventdescription,
+      date;
+  const cuponcardModel(
+      {Key? key,
+      required this.money,
+      required this.location,
+      required this.commintiyname,
+      required this.eventheader,
+      required this.eventdescription,
+      required this.date})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +42,7 @@ class eventViewmodels extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Text(
-                      '0',
+                      money,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 24,
@@ -48,10 +62,10 @@ class eventViewmodels extends StatelessWidget {
               ),
             ),
             const Divider(color: Colors.white54, height: 0),
-            const Expanded(
+            Expanded(
               child: Center(
                 child: Text(
-                  'koala kafe',
+                  location,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white,
@@ -70,9 +84,9 @@ class eventViewmodels extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
+          children: [
             Text(
-              'Bilişim Topluluğu',
+              commintiyname,
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 13,
@@ -82,7 +96,7 @@ class eventViewmodels extends StatelessWidget {
             ),
             SizedBox(height: 4),
             Text(
-              'C dersleri',
+              eventheader,
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 24,
@@ -91,7 +105,7 @@ class eventViewmodels extends StatelessWidget {
               ),
             ),
             Text(
-              'şaban hoca verecek',
+              eventdescription,
               // textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 12,
@@ -101,7 +115,7 @@ class eventViewmodels extends StatelessWidget {
             ),
             Spacer(),
             Text(
-              '20 hazıran perşembe',
+              date,
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.black45,

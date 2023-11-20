@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_event_calendar/flutter_event_calendar.dart';
 import 'package:toplulugum/core/utils/colors.dart';
-import 'package:toplulugum/app/global/pages/activity/viewmodel/eventViewModels.dart';
+import 'package:toplulugum/app/global/widgets/cuponcard.dart';
 
 Widget activitybody(ViewType viewType) {
   return EventCalendar(
@@ -20,7 +20,13 @@ Widget activitybody(ViewType viewType) {
     ),
     events: [
       Event(
-        child: eventViewmodels(),
+        child: cuponcardModel(
+            money: "10",
+            location: "koala kafe",
+            commintiyname: "Bilişim Toplulupu",
+            eventheader: "c dersi",
+            eventdescription: "eventdescription",
+            date: "20/12/2130"),
         dateTime: CalendarDateTime(
           year: 2023,
           month: 11,

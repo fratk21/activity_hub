@@ -17,7 +17,7 @@ class _ComumminityHomeState extends State<ComumminityHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appBarview(false, context),
-      body: homebody(),
+      body: homebody(context),
     );
   }
 }

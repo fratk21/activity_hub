@@ -3,20 +3,25 @@ import 'package:accordion/accordion_section.dart';
 import 'package:accordion/controllers.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:toplulugum/app/communityModule/view/communityEvent/comminityEvent.dart';
+import 'package:toplulugum/app/communityModule/view/communityNotif/communityNotif.dart';
+import 'package:toplulugum/app/communityModule/view/communitymembers/comminityMembers.dart';
+import 'package:toplulugum/app/global/utils/copyfunction.dart';
 import 'package:toplulugum/app/global/utils/imageSlider.dart';
 import 'package:toplulugum/app/global/utils/style.dart';
 import 'package:toplulugum/core/utils/colors.dart';
+import 'package:toplulugum/core/utils/pageroutes.dart';
 import 'package:toplulugum/core/widgets/sizedbox.dart';
 
-Widget Noticesview() {
+Widget Noticesview(BuildContext context) {
   return SingleChildScrollView(
     child: Accordion(
       disableScrolling: true,
       headerBorderColor: Colors.blueGrey,
       headerBorderColorOpened: Colors.transparent,
-      headerBackgroundColorOpened: AppColors.blue,
+      headerBackgroundColorOpened: AppColors.dpurple.withOpacity(0.5),
       contentBackgroundColor: Colors.white,
-      contentBorderColor: AppColors.blue,
+      contentBorderColor: AppColors.dpurple.withOpacity(0.5),
       contentBorderWidth: 3,
       contentHorizontalPadding: 20,
       scaleWhenAnimating: true,
@@ -39,13 +44,17 @@ Widget Noticesview() {
             content: Column(
               children: [
                 ListTile(
-                  onTap: () {},
+                  onTap: () {
+                    copyToClipboard("textToCopy");
+                  },
                   title: Text("Üye Ekleme Kodu", style: twoheaderStyle),
                   trailing: Icon(Icons.copy),
                   subtitle: Text("21213123123123123", style: contentStyle),
                 ),
                 ListTile(
-                  onTap: () {},
+                  onTap: () {
+                    PageNavigator.push(context, ComminityMembers());
+                  },
                   title: Text("Üye Ayarları", style: twoheaderStyle),
                   trailing: Icon(CupertinoIcons.right_chevron),
                   subtitle:
@@ -64,17 +73,14 @@ Widget Noticesview() {
             content: Column(
               children: [
                 ListTile(
-                  onTap: () {},
+                  onTap: () {
+                    PageNavigator.push(context, CommunityEvent());
+                  },
                   title: Text("Etkinliklerim", style: twoheaderStyle),
                   trailing: Icon(CupertinoIcons.right_chevron),
                   subtitle: Text("Etkinlik düzenle & Sil & Listele",
                       style: contentStyle),
                 ),
-                ListTile(
-                  onTap: () {},
-                  title: Text("Etkinlik Oluştur", style: twoheaderStyle),
-                  trailing: Icon(CupertinoIcons.right_chevron),
-                )
               ],
             )),
         AccordionSection(
@@ -88,17 +94,14 @@ Widget Noticesview() {
             content: Column(
               children: [
                 ListTile(
-                  onTap: () {},
+                  onTap: () {
+                    PageNavigator.push(context, CommNotifScreen());
+                  },
                   title: Text("Duyurularım", style: twoheaderStyle),
                   trailing: Icon(CupertinoIcons.right_chevron),
                   subtitle: Text("Duyuru düzenle & Sil & Listele",
                       style: contentStyle),
                 ),
-                ListTile(
-                  onTap: () {},
-                  title: Text("Duyuru Oluştur", style: twoheaderStyle),
-                  trailing: Icon(CupertinoIcons.right_chevron),
-                )
               ],
             )),
         AccordionSection(
@@ -118,35 +121,6 @@ Widget Noticesview() {
                   subtitle: Text("Avantajları düzenle & Sil & Listele",
                       style: contentStyle),
                 ),
-                ListTile(
-                  onTap: () {},
-                  title: Text("Avantaj Oluştur", style: twoheaderStyle),
-                  trailing: Icon(CupertinoIcons.right_chevron),
-                )
-              ],
-            )),
-        AccordionSection(
-            isOpen: true,
-            contentVerticalPadding: 20,
-            leftIcon: Icon(
-              Icons.newspaper,
-              color: Colors.white,
-            ),
-            header: Text(' Proje Ayarları', style: headerStyle),
-            content: Column(
-              children: [
-                ListTile(
-                  onTap: () {},
-                  title: Text("Projelerim", style: twoheaderStyle),
-                  trailing: Icon(CupertinoIcons.right_chevron),
-                  subtitle: Text("Proje düzenle & Sil & Listele",
-                      style: contentStyle),
-                ),
-                ListTile(
-                  onTap: () {},
-                  title: Text(" Proje Oluştur", style: twoheaderStyle),
-                  trailing: Icon(CupertinoIcons.right_chevron),
-                )
               ],
             )),
       ],
@@ -154,7 +128,7 @@ Widget Noticesview() {
   );
 }
 
-Widget homebody() {
+Widget homebody(BuildContext context) {
   return SingleChildScrollView(
     physics: ClampingScrollPhysics(),
     child: Padding(
@@ -165,7 +139,7 @@ Widget homebody() {
           imageSlider(images),
           sizedBoxH(10),
           sizedBoxH(5),
-          Noticesview(),
+          Noticesview(context),
           sizedBoxH(5),
           sizedBoxH(5),
         ],

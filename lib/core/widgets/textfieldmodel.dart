@@ -10,17 +10,18 @@ class MyTextField extends StatefulWidget {
   final Function()? onChanged;
   final double? height;
   final int? line;
+  final TextInputType? type;
 
-  const MyTextField({
-    super.key,
-    required this.controller,
-    required this.hintText,
-    required this.obscureText,
-    required this.prefixIcon,
-    this.line,
-    this.height,
-    this.onChanged,
-  });
+  const MyTextField(
+      {super.key,
+      required this.controller,
+      required this.hintText,
+      required this.obscureText,
+      required this.prefixIcon,
+      this.line,
+      this.height,
+      this.onChanged,
+      this.type});
 
   @override
   _MyTextFieldState createState() => _MyTextFieldState();
@@ -44,6 +45,7 @@ class _MyTextFieldState extends State<MyTextField> {
         borderRadius: BorderRadius.circular(10),
       ),
       child: TextField(
+        keyboardType: widget.type,
         maxLines: widget.line,
         controller: widget.controller,
         obscureText: isObscure,
