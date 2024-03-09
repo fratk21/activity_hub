@@ -21,7 +21,7 @@ class _splashscreenState extends State<splashscreen> {
   void splash() async {
     await Future.delayed(Duration(seconds: 3));
     PageNavigator.push(
-        context, BottomNavigator(widgetList: bottomCommunityBarPages));
+        context, BottomNavigator(widgetList: bottomUserBarPages));
   }
 
   @override
