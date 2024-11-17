@@ -11,7 +11,7 @@ Widget activitybody(ViewType viewType) {
         weekDaySelectedColor: AppColors.black,
         eventCounterColor: AppColors.black),
     calendarType: CalendarType.GREGORIAN,
-    calendarLanguage: 'tr',
+    calendarLanguage: 'en',
     calendarOptions: CalendarOptions(
       viewType: viewType,
     ),
@@ -29,8 +29,8 @@ Widget activitybody(ViewType viewType) {
             date: "9/4/2024"),
         dateTime: CalendarDateTime(
           year: 2024,
-          month: 4,
-          day: 9,
+          month: 9,
+          day: 22,
           calendarType: CalendarType.GREGORIAN,
         ),
       ),
